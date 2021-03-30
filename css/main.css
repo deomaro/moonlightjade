@@ -1,0 +1,364 @@
+:root{
+  --primaryColor:#425af5;
+  --primaryDarkColor:#140466;
+  --darkColor:#1e1e1e;
+  --accentColor:#fefefe;
+  --faintAccentColor:#e2e1e0;
+}
+
+*{
+  transition: all 0.3s ease-in;
+}
+
+body, html{
+  background: var(--faintAccentColor);
+  color:var(--darkColor);
+  width:100%;
+  height: 100%;
+  font-family: 'Open Sans' sans-serif;
+}
+
+.loader{
+  position: fixed;
+  width: 100%;
+  height:100%;
+  z-index: 3000;
+  background: var(--darkColor);
+
+}
+
+.loading{
+  position: absolute;
+  border-radius: 25px;
+  top:50%;
+  left:50%;
+  width: 50px;
+  height: 50px;
+  margin: 0px;
+  margin-left:-25px;
+  margin-top:-25px;
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
+  border-left: 3px solid white;
+  border-right: 3px solid black;
+  animation-name: load;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.loadingDiv{
+  position: absolute;
+  border-radius: 20px;
+  top:50%;
+  left:50%;
+  width: 40px;
+  height: 40px;
+  margin: 0px;
+  margin-left:-20px;
+  margin-top:-20px;
+  border-top: 3px solid var(--primaryColor);
+  border-bottom: 3px solid var(--primaryColor);
+  border-left: 3px solid var(--primaryColor);
+  border-right: 3px solid var(--accentColor);
+  animation-name: load;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes load {
+  from{
+    transform: rotate(0deg);
+  }
+
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+.nToast{
+  position: fixed;
+  width:400px;
+  min-height: 100px;
+  padding: 10px;
+  z-index: 3005;
+  box-shadow:0 0 5px 2px rgba(0,0,0,0.3);
+  background: var(--darkColor);
+  color:var(--accentColor);
+  font-weight: 300;
+  font-size:15px;
+  bottom: 0px;
+  right: 0px;
+  cursor: pointer;
+  display: none;
+  border:1px solid var(--accentColor);
+}
+
+
+/*
+  Handling navigation links and menu
+*/
+nav{
+  z-index: 2000;
+}
+.mNav{
+  color:var(--accentColor) !important;
+  outline: none !important;
+  border: none !important;
+}
+.mNav:hover{
+  color:var(--darkColor) !important;
+}
+
+.navbar-brand{
+  outline: none !important;
+  border: none !important;
+}
+
+.nav-item{
+  outline: none !important;
+  border: none !important;
+}
+.nav-item:hover{
+  padding-left:20px;
+  padding-right:20px;
+  background: var(--primaryColor) !important;
+  border-radius: 30px;
+  box-shadow: 0 0 15px 8px rgba(0, 0, 0, 0.3);
+}
+
+.current_page_item{
+  background: var(--primaryColor) !important;
+  border-radius: 30px;
+  box-shadow: 0 0 15px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+/*
+  Handling banner
+*/
+
+.mBanner{
+  width: 100%;
+  z-index: 1;
+  margin:0px;
+  padding:0px;
+  height: 100%;
+  background-image: url(../images/banner_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.mBannerCover{
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  background: rgba(0, 0, 0, 0.7);
+  padding-top: 120px;
+}
+
+.mBannerCover h1{
+  text-align: center;
+  font-weight: 390;
+  color: var(--accentColor);
+}
+
+.subBanner{
+  margin: -200px auto;
+  max-width: 1100px;
+  z-index: 2;
+  background: var(--accentColor);
+  padding: 10px;
+  padding-bottom: 230px;
+  font-size: 20px;
+  height: auto;
+  overflow: auto;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  word-wrap: break-word;
+  overflow-x: hidden;
+}
+
+
+/*
+  handling fetureBox
+*/
+
+.featureBox{
+  position: relative;
+  margin: 0px;
+  margin-bottom: 20px;
+  padding: 0px;
+  background: var(--accentColor);
+  height: 300px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  overflow: hidden;
+}
+
+.featureBox:hover{
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.feature-content{
+  width: 100%;
+  padding:10px;
+  height: auto;
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+}
+
+.feature-icon{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.feature-title{
+  text-align: center;
+  font-weight: 390;
+  font-size: 25px;
+  color: var(--primaryColor);
+}
+
+.blogBtn{
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  border-radius: 40px;
+  background: var(--primaryColor);
+  width: 500px;
+  height: 80px;
+  font-size: 25px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.blogBtn:hover{
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+
+
+/*
+  handling teamBox
+*/
+
+.teamBox{
+  margin: 0px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: var(--accentColor);
+  height: 300px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.teamBox:hover{
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+/*
+  handling carousel & testmonials
+*/
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  outline:none;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  border: none;
+  background-image: none;
+}
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color: var(--primaryDarkColor);
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: var(--primaryDarkColor);
+}
+
+.carousel-item{
+  max-width: 600px !important;
+  margin: 0 auto !important;
+}
+
+.testmonial{
+  max-width: 300px !important;
+  margin: 10px auto;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.testmonial-comment{
+  font-weight: 390 !important;
+  color: var(--darkColor) !important;
+  font-size: 25px !important;
+}
+
+.testmonial-user{
+  font-weight: 450 !important;
+  color: var(--primaryDarkColor) !important;
+  font-size: 15px !important;
+}
+
+/*
+  popular posts
+*/
+
+.popularPost{
+  width: 100%;
+  padding-left: 20px;
+  border-left: 6px solid var(--darkColor);
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.noStyleList{
+  list-style: none;
+  padding-left: 0px;
+  padding: 0px;
+}
+
+.noStyleList li{
+  padding: 0px;
+}
+
+/*
+  handling footer
+*/
+
+.mFooter{
+  width: 100%;
+  min-height: 400px;
+  padding-top: 70px;
+  margin: 0px;
+  background: var(--primaryColor);
+}
+
+/*
+  handling social icons
+*/
+
+.socialIcon{
+  width:40px;
+  height: 40px;
+  display: inline-block;
+  float: left;
+  background: none;
+  color: black;
+  border-radius: 10px;
+  padding: 10px;
+  font-size:20px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.socialIcon:hover{
+  background: var(--accentColor);
+}

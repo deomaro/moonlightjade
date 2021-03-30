@@ -1,0 +1,45 @@
+@media only screen and (max-width:600px) {
+  .nav-item{
+    outline: none !important;
+    border: none !important;
+  }
+  .nav-item:hover{
+    padding-left:20px;
+    padding-right:20px;
+    background: var(--primaryColor) !important;
+    border-radius: 0px;
+    box-shadow: 0 0 15px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .current_page_item{
+    background: var(--primaryColor) !important;
+    border-radius: 0px;
+    box-shadow: 0 0 15px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .mBannerCover{
+    padding-top: 70px;
+  }
+
+
+  .mBannerCover h1{
+    font-size: 30px;
+  }
+
+  .subBanner{
+    width:90%;
+    font-size: 17px;
+    margin:-100px auto;
+    padding: 10px;
+    padding-bottom: 130px;
+  }
+
+  .blogBtn{
+    border-radius: 20px;
+    background: var(--primaryColor);
+    width: 100%;
+    height: 40px;
+    font-size: 13px;
+    font-weight: 400;
+  }
+}
